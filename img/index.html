@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="img/favicon.ico">
+	<title>Soask</title>
+</head>
+<body>
+	<!-- <div class="browser">
+		<img src="img/tab.png">
+		<a href="newTab.html" style="margin-left: -.7vw;"><img src="img/plus.png"></a>
+	</div> -->
+	
+	<section>
+		<img src="img/search-top.png">
+		<div class="content">
+			<div>
+				<img src="img/LOGO.png">
+				<input class="search" type="text">
+				<input class="submit" type="submit" value="Search搜尋" onclick="search()">
+			</div>
+		</div>
+		<img class="footer" src="img/search-footer.png">
+	</section>
+
+
+	<script>
+		function search() {
+			const searchInput = document.querySelector('.search');
+
+			if (searchInput.value === '趙昌澤') {
+				window.location.href = 'result.html';
+			} else if (searchInput.value === 'A片網') {
+				window.location.href = 'site.html';
+			} else if (searchInput.value === 'Ａ片網') {
+				window.location.href = 'site.html';
+			}
+		}
+
+		document.addEventListener('keydown', event => {
+		 	if (event.key === 'Enter') {
+		 		document.querySelector('.submit').click();
+		 	}
+		})
+	</script>
+</body>
+</html>
