@@ -33,10 +33,12 @@
 
 			if (searchInput.value === '趙昌澤') {
 				window.location.href = 'result.html';
-			} else if (searchInput.value === 'A片網') {
+			} else if (searchInput.value.includes('片網')) {
 				window.location.href = 'site.html';
-			} else if (searchInput.value === 'Ａ片網') {
-				window.location.href = 'site.html';
+			} else if (searchInput.value === '崙⼭科技大學') {
+				window.location.href = 'University.html';
+			} else if (searchInput.value.includes('新台北設計展')) {
+				window.location.href = 'design.html';
 			}
 		}
 

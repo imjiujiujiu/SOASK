@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="img/favicon.ico">
+	<title>SOASK</title>
+</head>
+<body>
+	<header class="uniHeader">
+		<div class="uniSearch">
+			<input id="searchInput" type="text">
+			<button onclick="search();"><img src="img/search.png"></button>
+		</div>
+		<img src="img/uniLang.png">
+	</header>
+	<section>
+		<img src="img/uniPage.jpg">
+	</section>
+	<section class="popUp">
+		<div class="popUpContent">
+			<div class="uniSearch" style="margin-bottom: 20px;">
+				<input id="popUpInput" type="text">
+				<button><img src="img/search.png"></button>
+			</div>
+			<hr>
+			<div>
+				<div class="resultValue"></div>
+				<div class="result"></div>
+			</div>
+		</div>
+	</section>
+
+
+	<script>
+		function search() {
+			const searchInput = document.querySelector('#searchInput');
+			const popUp = document.querySelector('.popUp');
+			const popUpInput = document.querySelector('#popUpInput');
+			const resultValue = document.querySelector('.resultValue');
+			const result = document.querySelector('.result');
+
+			if (searchInput.value != '') {
+				popUp.classList.add('show');
+				popUpInput.value = `'` + searchInput.value + `'`;
+				resultValue.innerHTML = `'` + searchInput.value + `'搜尋結果`;
+
+				if (searchInput.value === '黃晟君') {
+					result.innerHTML = `
+						<a href="uniPage02.html"><img src="img/uniResult_01.png"></a>
+						<a href="#!"><img src="img/uniResult_02.png"></a>
+						<a href="#!"><img src="img/uniResult_03.png"></a>
+					`;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
