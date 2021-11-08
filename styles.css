@@ -96,9 +96,14 @@ section {
     bottom: 0;
 }
 
-.result {
+/*.result {
 	max-width: 1200px;
 	margin: 0 auto;
+}*/
+
+.result {
+    max-width: auto;
+    margin-left: 11vw;
 }
 
 .flex {
